@@ -69,7 +69,7 @@ export default function SignUpForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@company.com"
                 className={`w-full  rounded-md focus:outline-none 
-                    border-black border-2 p-2.5  focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] focus:bg-[#ffc29e]/30 active:shadow-[2px_2px_0px_rgba(0,0,0,1)] 
+                    border-black border-2 p-2.5 text-black focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] focus:bg-[#ffc29e]/30 active:shadow-[2px_2px_0px_rgba(0,0,0,1)] 
                 `}
                 required
               />
@@ -88,7 +88,7 @@ export default function SignUpForm() {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
                 className="w-full  rounded-md focus:outline-none 
-                    border-black border-2 p-2.5  focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] focus:bg-[#ffc29e]/30 active:shadow-[2px_2px_0px_rgba(0,0,0,1)] 
+                    border-black border-2 p-2.5 text-black  focus:shadow-[2px_2px_0px_rgba(0,0,0,1)] focus:bg-[#ffc29e]/30 active:shadow-[2px_2px_0px_rgba(0,0,0,1)] 
                 "
                 required
               />
