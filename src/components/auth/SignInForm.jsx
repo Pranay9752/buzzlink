@@ -3,7 +3,7 @@ import { useState, useCallback } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import loginIllustration from '@/../public/assets/img/login_illustration.png';
+import loginIllustration from '@/../public/assets/img/signin_img.png';
 import googlePNG from '@/../public/assets/img/google.png';
 import applePNG from '@/../public/assets/img/apple.png';
 import Link from "next/link";

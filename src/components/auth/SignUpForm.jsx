@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import RoleSelector from "./RoleSelector";
 import Image from "next/image";
-import loginIllustration from "@/../public/assets/img/login_illustration.png";
+import loginIllustration from "@/../public/assets/img/signin_img.png";
 import Link from "next/link";
 import { SocialSignInButton } from "./SignInForm";
 import googlePNG from "@/../public/assets/img/google.png";
