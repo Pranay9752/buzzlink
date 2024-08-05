@@ -6,6 +6,7 @@ import confetti from "canvas-confetti";
 import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { addpost } from "@/_actions/post_actions";
 const tadaAnimation = {
   "0%": { transform: "scale3d(1, 1, 1)" },
   "10%, 20%": { transform: "scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)" },
@@ -58,11 +59,18 @@ function AddPost() {
     setText("");
   };
 
-  const handlePost = () => {
+  const handlePost = async () => {
     if (text !== "" || images.length > 0) {
-      toggleOpen();
-      refresh();
-      handleConfetti();
+      await addpost({
+        data: {
+          caption: text,
+          images: images,
+        },
+      }).then((res) => {
+        toggleOpen();
+        refresh();
+        handleConfetti();
+      });
     }
   };
 
