@@ -4,8 +4,6 @@ import mongoose from "mongoose";
 import { Comment } from "./Comment";
 import { Like } from "./Like";
 
-
-
 const PostSchema = new mongoose.Schema(
   {
     username: {
@@ -14,13 +12,13 @@ const PostSchema = new mongoose.Schema(
     },
     caption: {
       type: String,
-      required: function() {
+      required: function () {
         return !this.images || this.images.length === 0;
       },
     },
     images: {
       type: [String],
-      required: function() {
+      required: function () {
         return !this.caption;
       },
     },
@@ -29,13 +27,20 @@ const PostSchema = new mongoose.Schema(
       match: /^#[0-9A-F]{6}$/i, // Ensures it is a valid hex color code
       required: true,
     },
-    likes: [Like],
-    comments: [Comment],
+    likes: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Like",
+      },
+    ],
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comment",
+      },
+    ],
   },
   { timestamps: true }
 );
-
-
-
 
 export const Post = mongoose.models.Post || mongoose.model("Post", PostSchema);
