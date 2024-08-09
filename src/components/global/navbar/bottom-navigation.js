@@ -9,7 +9,7 @@ const BottomNavigation = ({ items }) => {
   return (
     <section
       id="bottom-navigation"
-      className="block fixed inset-x-0 bottom-0 z-0 border-t-2 border-black bg-white"
+      className="block fixed  inset-x-0 bottom-0 z-0 border-t-2 border-black bg-white"
     >
       <div id="tabs" className="flex justify-around items-center">
         {items.map((item, index) => {

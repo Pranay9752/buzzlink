@@ -1,4 +1,7 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+
+
+
 
 const NicheSchema = new mongoose.Schema({
   name: {
@@ -13,6 +16,4 @@ const NicheSchema = new mongoose.Schema({
   },
 });
 
-const Niche = mongoose.model("Niche", NicheSchema);
-
-module.exports = Niche;
+export const Niche = mongoose.models.Niche || mongoose.model("Niche", NicheSchema);

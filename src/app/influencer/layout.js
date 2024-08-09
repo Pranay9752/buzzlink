@@ -57,7 +57,10 @@ const topItems = [<AddPost />];
 export default function InfluencerLayout({ children }) {
   return (
     <NavigationLayout bottomItems={bottomItems} topItems={topItems}>
+    <div className="max-w-[600px]">
+
       {children}
+    </div>
     </NavigationLayout>
   );
 }
