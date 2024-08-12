@@ -1,3 +1,4 @@
+"use client"
 const NeoBorder = ({
   children,
   offset_x = 2,
